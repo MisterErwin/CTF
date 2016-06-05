@@ -1,0 +1,54 @@
+name: CTF
+main: net.askarian.MisterErwin.CTF.CTF
+version: 0.7
+softdepend: [TagAPI]
+commands:
+   class:
+      description: Shows all classes and changes it
+      usage: /<command> [classname]
+   ctf:
+      description: Admin command
+      usage: /<command> for more
+   vote:
+      description: Vote for a Map
+      usage: /<command>
+permissions:
+    CTF.*:
+        description: Gives access to all CTF commands and classes
+        children:
+            CTF.admin: true
+            CTF.archer: true
+            CTF.assassin: true
+            CTF.chemist: true
+            CTF.heavy: true
+            CTF.medic: true
+            CTF.ninja: true
+            CTF.pyro: true
+            CTF.soldier: true
+    CTF.admin:
+        description: Admin Commands
+        default: op
+    CTF.archer:
+        description: Archer Class
+        default: true
+    CTF.assassin:
+        description: Assassin Class
+        default: op
+    CTF.chemist:
+        description: Chemist Class
+        default: op
+    CTF.heavy:
+        description: Heavy Class
+        default: true
+    CTF.medic:
+        description: Medic Class
+        default: true
+    CTF.ninja:
+        description: Ninja Class
+        default: op
+    CTF.pyro:
+        description: Pyro Class
+        default: op
+    CTF.soldier:
+        description: Soldier Class
+        default: true
